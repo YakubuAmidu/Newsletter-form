@@ -41,7 +41,7 @@ app.post('/', function (req, res) {
     auth: 'yakubu1:2325a6d68ed12b7e84e77e256168a2cf-us6',
   };
 
-  const request = https.requests(url, options, function (response) {
+  const request = https.request(url, options, function (response) {
     response.on('data', function (data) {
       console.log(JSON.parse(data));
     });
